@@ -1,0 +1,22 @@
+### SIGN UP
+POST http://localhost:2003/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "hilmo",
+    "password": "Mantab57"
+}
+
+### LOG IN
+POST http://localhost:2003/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "hilmo",
+    "password": "Mantab57"
+}
+
+### KEEP LOGGED IN
+GET http://localhost:2003/auth/keeploggedin HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6ImhpbG1vIiwicm9sZSI6InVzZXIiLCJpYXQiOjE2MzcxMzgyMzUsImV4cCI6MTYzNzEzODgzNX0.S1JQKxdcW_MoBZ-2QZIMnPbBKqyqjslg2LrAKYDN8Ng
