@@ -1,0 +1,11 @@
+### ACTIVATE USER
+GET http://localhost:2003/admin/activate/2 HTTP/1.1
+Content-Type: application/json
+
+### DEACTIVATE USER
+GET http://localhost:2003/admin/deactivate/2 HTTP/1.1
+Content-Type: application/json
+
+### GET USERS
+GET http://localhost:2003/admin/get HTTP/1.1
+Content-Type: application/json
