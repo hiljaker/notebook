@@ -3,6 +3,7 @@ POST http://localhost:2003/content/add/2 HTTP/1.1
 Content-Type: application/json
 
 {
+    "title": "hi guys",
     "content": "aku lg ngoding tp pusing"
 }
 
@@ -23,6 +24,7 @@ PATCH http://localhost:2003/content/edit/2 HTTP/1.1
 Content-Type: application/json
 
 {
+    "title": "test dlu bos",
     "content": "ediiiiit"
 }
 

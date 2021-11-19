@@ -2,12 +2,13 @@ const { connection } = require("../connection");
 
 module.exports = {
     addContent: async (req, res) => {
-        const { content } = req.body
+        const { title, content } = req.body
         const { user_id } = req.params
         const msc = await connection.promise().getConnection()
         try {
             let sql = `insert into content set ?`
             const contentData = {
+                title,
                 content,
                 user_id
             }
@@ -88,7 +89,7 @@ module.exports = {
         }
     },
     editContent: async (req, res) => {
-        const { content } = req.body
+        const { title, content } = req.body
         const { content_id } = req.params
         const msc = await connection.promise().getConnection()
         try {
@@ -100,6 +101,7 @@ module.exports = {
             }
             sql = `update content set ? where content_id = ?`
             const contentData = {
+                title,
                 content
             }
             await msc.query(sql, [contentData, content_id])
